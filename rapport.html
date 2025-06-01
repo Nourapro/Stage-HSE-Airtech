@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rapport de stage – Noura Benherri</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -27,42 +27,28 @@
       z-index: 1000;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo {
-      height: 50px;
-    }
-
     h1 {
       font-size: 1.5rem;
       margin: 0;
     }
 
-    nav {
-      position: relative;
-    }
-
-    .nav-links {
+    nav ul {
       display: flex;
-      gap: 25px;
+      gap: 20px;
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    .nav-links a {
+    nav a {
       text-decoration: none;
       color: #004080;
       font-weight: 600;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    nav a:hover,
+    nav a.active {
       color: #0066cc;
     }
 
@@ -103,76 +89,28 @@
       margin-top: 40px;
       font-size: 0.9rem;
     }
-
-    .menu-icon {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        display: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .menu-icon {
-        display: block;
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #004080;
-      }
-    }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      toggle.addEventListener('change', () => {
-        navLinks.classList.toggle('show');
-      });
-    });
-  </script>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="images/logo-airtech.png" alt="Logo Airtech Europe" class="logo">
-      <h1>Stage QHSSE – Noura Benherri</h1>
-    </div>
+    <h1>Rapport de stage – Noura Benherri</h1>
     <nav>
-      <input type="checkbox" id="menu-toggle" style="display:none;">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="portfolio.html">Portefolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="rapport.html" class="active">Rapport de stage</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Rapport de stage – Version interactive</h2>
-    <p>Ci-dessous, vous pouvez consulter le rapport de stage directement en ligne. Vous pouvez également le télécharger en cliquant sur le bouton ci-dessous.</p>
-
-    <iframe src="rapport-stage-noura.pdf"></iframe>
-
-    <div style="text-align: center;">
-      <a href="C:\Users\noura\Documents\rapport-stage-noura.pdf"class="PDF" target="_blank">📄 Télécharger le rapport PDF</a>
-    </div>
+    <h2>Rapport de stage – Affichage PDF</h2>
+    <iframe src="rapport-de-stage.pdf"></iframe>
+    <a class="btn" href="rapport-de-stage.pdf" target="_blank">Ouvrir dans un nouvel onglet</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Noura Benherri – Tous droits réservés.</p>
+    &copy; 2025 Noura Benherri – Stage QHSSE chez Airtech Europe Sàrl
   </footer>
 </body>
 </html>
